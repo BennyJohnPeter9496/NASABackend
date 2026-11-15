@@ -27,7 +27,7 @@ dotnet restore
 dotnet run
 ```
 
-The launch profile listens on `http://localhost:5080`. In Development, open `http://localhost:5080/swagger` to explore and call the API. The OpenAPI document is available at `http://localhost:5080/swagger/v1/swagger.json`.
+The launch profile listens on `http://localhost:5080`. Open `http://localhost:5080/swagger` to explore and call the API. Swagger UI (`/swagger`) and the OpenAPI document (`/swagger/v1/swagger.json`) are enabled in all environments, including Production.
 
 Check health:
 
