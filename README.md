@@ -11,7 +11,7 @@ ASP.NET Core Web API for the NASA Space Apps Challenge project **Abandoned but n
 - Azure OpenAI story generation using the current Azure OpenAI v1 Chat Completions route.
 - Safe demo fallback when Azure credentials are missing or the model call fails.
 - `POST /api/agent/ask` for follow-up questions.
-- CORS configured for Angular at `http://localhost:4200`.
+- CORS uses the `AllowAll` policy to allow any origin, header, and method (without credentials).
 
 ## Requirements
 
