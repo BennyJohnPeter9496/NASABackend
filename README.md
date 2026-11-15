@@ -57,7 +57,9 @@ export AzureOpenAI__ApiKey="YOUR-KEY"
 dotnet run
 ```
 
-The backend calls `POST {endpoint}/openai/v1/chat/completions` and sends the deployment name as `model`. If these settings are not present, the API still runs and returns a deterministic demo story from the catalogue.
+The backend calls `POST {endpoint}/openai/v1/chat/completions` and sends the deployment name as `model`. Set `AzureOpenAI:Endpoint` to the resource base URL only (for example, `https://YOUR-RESOURCE.openai.azure.com`), without an API path or query string. `AzureOpenAI:ModelDeployment` must match the deployment name in that Azure resource, not just a model name. If these settings are not present, the API still runs and returns a deterministic demo story from the catalogue.
+
+Requests omit `temperature` for compatibility with reasoning models such as GPT-5.6 Luna, which reject custom sampling parameters. See [Azure OpenAI reasoning model parameter support](https://learn.microsoft.com/en-us/azure/foundry/openai/how-to/reasoning#unsupported-parameters).
 
 ## Main API
 

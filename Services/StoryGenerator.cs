@@ -67,7 +67,6 @@ public sealed class AzureOpenAiStoryGenerator(
             request.Content = new StringContent(JsonSerializer.Serialize(new
             {
                 model = _deployment,
-                temperature = 0.3,
                 max_completion_tokens = 900,
                 response_format = new { type = "json_object" },
                 messages = new[]
